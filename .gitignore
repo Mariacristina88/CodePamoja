@@ -1,0 +1,8 @@
+bower_components
+node_modules
+.sass-cache/9d9b3333ffbd5d652a1c09752346e2f51a0a5078/_colors.scssc
+.sass-cache/9d9b3333ffbd5d652a1c09752346e2f51a0a5078/_layout.scssc
+.sass-cache/9d9b3333ffbd5d652a1c09752346e2f51a0a5078/_mixin.scssc
+.sass-cache/9d9b3333ffbd5d652a1c09752346e2f51a0a5078/_slider.scssc
+.sass-cache/9d9b3333ffbd5d652a1c09752346e2f51a0a5078/_typography.scssc
+.sass-cache/9d9b3333ffbd5d652a1c09752346e2f51a0a5078/main.scssc

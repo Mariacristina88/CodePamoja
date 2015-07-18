@@ -1,0 +1,126 @@
+@import url(http://fonts.googleapis.com/css?family=Play:400,700|Signika:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,300,400);
+
+.map-path {
+  stroke: white;
+  stroke-width: 1px;
+  fill: #FFE4A3;
+}
+
+.map {
+  background-color: #2d8593;
+  height:100%;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  position: fixed;c 
+  margin-right: 20px;
+  top: 120px; 
+  right: 20px; 
+}
+
+#scene {
+  position: absolute;
+}
+
+.buttonzoom {
+  width: 50px;
+  height: 50px;
+}
+
+text {
+  fill:grey;
+  font-family:"Roboto";
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#zoomBtn { 
+  position: absolute; 
+  top: 10px; 
+  right: 20px; 
+}
+
+#map { 
+  width: 1366px; 
+  height: 764px; 
+}
+
+.mytooltip {
+  position:absolute;
+  text-align: center;
+  width: 200px;
+  height:auto;
+  background-color: white;
+  border-radius: 2px;
+  font: lighter 16px "Signika";
+  color: #787777;
+  padding: 6px 12px;
+  font-weight: 300;
+  z-index:3;
+}
+
+.mytooltip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 20px;
+  width: 100%;
+  line-height: 1;
+  color: white;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  margin: -3px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.mytooltip span {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    margin: 5px auto;
+  }
+
+.cloudanim {
+  -webkit-animation: cloudanim linear 5s forwards  ;
+  animation: cloudanim linear 5s forwards ;
+}
+
+@-webkit-keyframes cloudanim {
+    0% {opacity: 1;}
+    30% {opacity: 0;}
+    70% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes cloudanim {
+    0% {opacity: 1;}
+    30% {opacity: 0;}
+    70% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  #thumbnail {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    color: #787777;
+    text-align: center;
+  }

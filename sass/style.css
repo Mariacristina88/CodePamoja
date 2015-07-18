@@ -1,0 +1,430 @@
+@import url(http://fonts.googleapis.com/css?family=Play:400,700|Signika:400,300,600,700);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Signika";
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  height: auto; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: fixed; }
+
+nav {
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  padding: 0;
+  margin: auto;
+  position: fixed;
+  z-index: 7;
+  -webkit-box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46);
+  box-shadow: -1px 7px 23px 2px rgba(0, 0, 0, 0.46); }
+  nav ul {
+    margin: 30px 0 auto 0;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    float: left; }
+  nav li {
+    float: left;
+    margin: 0 30px 0 0;
+    padding: 0px;
+    list-style: none;
+    font-size: 14px;
+    font-family: "Play"; }
+  nav a {
+    color: #485956;
+    text-decoration: none; }
+  nav a:hover {
+    border-bottom: 2px solid #fcdb3d; }
+
+.navigation {
+  margin: 0 auto;
+  width: 794px;
+  height: 100%; }
+
+.onepage-wrapper {
+  height: 100%;
+  min-height: 700px;
+  max-height: 100%; }
+
+.logo {
+  background: url("../img/logo.png") no-repeat;
+  background-position: top center;
+  width: 140px;
+  height: 66px;
+  margin: 10px 20px 0 0;
+  padding: 0px;
+  float: left;
+  display: block; }
+
+.logo-small {
+  background: url("../img/logo-small.png") no-repeat;
+  background-position: top center;
+  width: 140px;
+  height: 66px;
+  margin: 10px 20px 0 0;
+  padding: 0px;
+  float: left;
+  display: none;
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease; }
+
+.logo-small:hover {
+  -webkit-transform: rotateY(350deg);
+  /* Safari */
+  transform: rotateY(350deg);
+  /* Standard syntax */ }
+
+.page1 {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  min-height: 730px;
+  background-size: 3000px auto;
+  background-image: url("../img/map.jpg");
+  background-position: center;
+  z-index: 3; }
+
+.page2 {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  min-height: 730px;
+  background-size: cover;
+  background-image: url("../img/partners.jpg");
+  z-index: 1; }
+
+.page3 {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  min-height: 730px;
+  background-image: url("../img/europeans_flags.png");
+  background-size: cover;
+  z-index: 2;
+  height: 115%;
+  height: 115vh;
+  /*	transform: skew(0deg, -4deg); */ }
+
+.page4 {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  min-height: 730px;
+  background-image: url("../img/euroflag.jpg");
+  background-size: cover;
+  z-index: 3; }
+
+.page6 {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  min-height: 730px;
+  background-color: #485956;
+  z-index: 4; }
+
+.about_text {
+  max-width: 550px;
+  min-width: 100px;
+  height: auto;
+  background-color: rgba(72, 89, 86, 0.7);
+  margin: 340px auto auto auto;
+  padding: 30px 0;
+  border: 3px #485956 solid; }
+  .about_text p {
+    color: white;
+    padding: 10px 20px 15px 20px;
+    text-align: center;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto; }
+
+.line {
+  width: 100px;
+  margin: auto;
+  padding: 0 0 10px 0; }
+
+.white_bord {
+  border-color: #fff; }
+
+.green_bord {
+  border-color: #485956; }
+
+.white {
+  color: white; }
+
+.green {
+  color: #485956; }
+
+.text {
+  margin: 300px 0 0 0; }
+
+.text p {
+  text-align: center;
+  max-width: 571px;
+  min-width: 200px;
+  margin: auto;
+  padding: 0 0 20px 0; }
+
+.icons {
+  margin: 15px auto 0 auto;
+  max-width: 308px; }
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 15s ease forwards;
+  -webkit-animation-play-state: paused; }
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+.margin_right {
+  margin-right: 34px; }
+
+.remove_mright {
+  margin-right: 0px; }
+
+.icons span {
+  width: 100px;
+  height: 100px; }
+
+.text-left {
+  text-align: left; }
+
+/*----------------- SKYLINE BUTTONS ------------------*/
+.skylines {
+  margin: 15px auto 0 auto;
+  max-width: 374px; }
+
+.skyline {
+  width: 170px;
+  height: 102px;
+  display: block;
+  float: left;
+  background-position: 0px 0px;
+  background-repeat: no-repeat; }
+  .skyline h1 {
+    height: 31%;
+    font-size: 13px;
+    font-family: "Play";
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 58px 0 0 0; }
+  .skyline :hover {
+    font-weight: 700;
+    color: #fcdb3d; }
+
+#milan {
+  background-image: url("../img/milan.png"); }
+
+#milan:hover {
+  background-image: url("../img/milan-hover.png"); }
+
+#oxford {
+  background-image: url("../img/oxford.png"); }
+
+#oxford:hover {
+  background-image: url("../img/oxford-hover.png"); }
+
+#manchester {
+  background-image: url("../img/manchester.png"); }
+
+#manchester:hover {
+  background-image: url("../img/manchester-hover.png"); }
+
+#denhaag {
+  background-image: url("../img/denhaag.png"); }
+
+#denhaag:hover {
+  background-image: url("../img/denhaag-hover.png"); }
+
+/*---------CONTACTS SECTION-----------*/
+.content {
+  margin: 130px auto 0 auto;
+  max-width: 900px;
+  height: 73%; }
+
+.page6 form {
+  width: 57%;
+  height: 62%;
+  margin: 0 27px;
+  float: left; }
+.page6 label {
+  display: block;
+  font-size: 20px;
+  font-family: "Signika";
+  font-weight: lighter;
+  float: left;
+  width: 90px;
+  height: 26px;
+  padding-top: 4px;
+  color: white;
+  margin: 0 15px 22px 0; }
+.page6 input {
+  display: block;
+  font-size: 20px;
+  font-family: "Signika";
+  font-weight: lighter;
+  margin: 0 0 30px 0;
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+  border: solid 1px white;
+  color: #fcdb3d;
+  padding: 0 5px;
+  position: relative; }
+.page6 textarea {
+  display: block;
+  font-size: 20px;
+  font-family: "Signika";
+  font-weight: lighter;
+  clear: both;
+  width: 100%;
+  max-width: 100%;
+  height: 95px;
+  border: solid 1px #fcdb3d;
+  color: #485956;
+  padding: 10px; }
+
+#submit {
+  background-color: transparent;
+  width: 150px;
+  height: 40px;
+  border: solid 1px #fcdb3d;
+  color: #fcdb3d;
+  font-family: "Play";
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 40px auto; }
+
+#submit:hover {
+  background-color: #fcdb3d;
+  color: white; }
+
+#contacts-info {
+  display: block;
+  float: left;
+  height: 373px;
+  max-width: 50.5%;
+  background-color: white;
+  margin: 0 0 27px 27px;
+  padding: 22px; }
+  #contacts-info h3 {
+    font-family: "Signika";
+    font-weight: normal;
+    font-size: 18px;
+    color: #485956;
+    margin: 0 0 30px 0; }
+  #contacts-info span {
+    font-family: "Play";
+    font-size: 13px;
+    color: #485956;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+  #contacts-info a {
+    color: #485956;
+    font-size: 15px;
+    text-align: left;
+    font-family: "Play";
+    font-weight: bold;
+    background-image: url("../img/angle-brackets.png");
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
+  #contacts-info a:hover {
+    color: #fcdb3d; }
+  #contacts-info p {
+    color: #485956;
+    font-size: 15px;
+    text-align: left;
+    font-family: "Play";
+    background-image: url("../img/angle-brackets.png");
+    background-position: 0% 20%;
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
+  #contacts-info address {
+    color: #485956;
+    font-size: 15px;
+    text-align: left;
+    font-family: "Play";
+    font-style: normal;
+    background-image: url("../img/angle-brackets.png");
+    background-position: 0% 5%;
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
+
+form p {
+  margin: 0;
+  position: absolute;
+  font-size: 12px;
+  color: #fcdb3d;
+  margin: -23px 0 0 0;
+  position: absolute;
+  font-family: "Signika"; }
+
+.margin {
+  margin-top: 0px; }
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #262f2d; }
+  footer p {
+    font-size: 11pt;
+    font-family: "Signika";
+    font-weight: lighter;
+    width: 45%;
+    height: 30px;
+    float: left;
+    margin: 29px 0px 0px 40px;
+    color: white;
+    text-align: right; }
+
+.mobile {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */
