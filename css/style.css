@@ -46,7 +46,7 @@ nav {
   nav a:hover {
     border-bottom-style: solid;
     border-bottom-width: 2px !important;
-    border-color: #fcdb3d; }
+    border-color: #F39200; }
   nav a.active {
     border-bottom: 2px solid #fcdb3d; }
 
@@ -358,7 +358,7 @@ nav {
 
 .group:hover span {
   font-weight: 700;
-  color: #fcdb3d; }
+  color: #F39200; }
 
 .skylines {
   margin: 15px auto 0 auto;
@@ -429,7 +429,7 @@ nav {
   width: 300px;
   background-color: transparent;
   border: solid 1px white;
-  color: #fcdb3d;
+  color: #F39200;
   padding: 0 5px;
   position: relative; }
   @media only screen and (max-device-width: 788px) and (orientation: portrait) {
@@ -475,8 +475,8 @@ nav {
   background-color: transparent;
   width: 150px;
   height: 40px;
-  border: solid 1px #fcdb3d;
-  color: #fcdb3d;
+  border: solid 1px #F39200;
+  color: #F39200;
   font-family: "Play";
   font-size: 18px;
   text-transform: uppercase;
@@ -489,12 +489,12 @@ nav {
       height: 115px;
       font-size: 50px;
       margin-top: 75px;
-      background-color: #fcdb3d;
+      background-color: #F39200;
       color: white;
       border: none; } }
 
 #submit:hover {
-  background-color: #fcdb3d;
+  background-color: #F39200;
   color: white; }
 
 #contacts-info {
@@ -549,7 +549,7 @@ nav {
         background-size: 20px;
         padding: 0 0 0 45px; } }
   #contacts-info a:hover {
-    color: #fcdb3d; }
+    color: #F39200; }
   #contacts-info p {
     color: #485956;
     font-size: 14px;
@@ -588,7 +588,7 @@ form p {
   margin: 0;
   position: absolute;
   font-size: 12px;
-  color: #fcdb3d;
+  color: #F39200;
   margin: -30px 0 0 0;
   position: absolute;
   font-family: "Signika"; }
@@ -1078,7 +1078,7 @@ footer {
       background-size: 20px;
       padding: 0 0 0 45px; }
     #contacts-info a:hover {
-      color: #fcdb3d; }
+      color: #F39200; }
     #contacts-info p {
       line-height: 1.2em;
       font-size: 1.8em;
