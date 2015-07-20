@@ -52,7 +52,7 @@ nav {
 		text-decoration: none;
 		border-bottom-style: solid;
 		border-bottom-width: 0px;
-		border-color: #fcdb3d;
+		border-color: $yellow;
 	}
 
 	a:hover {
@@ -62,7 +62,7 @@ nav {
 	}
 
 	a.active {
-		border-bottom: 2px solid #fcdb3d;
+		border-bottom: 2px solid $yellow;
 	}
 }
 
