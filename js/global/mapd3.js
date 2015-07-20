@@ -65,7 +65,7 @@ function createMap() {
                   .text(function (d) {return d.name;});
 
       var mainCircles = [
-                   { "x_axis": 340, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
+                   { "x_axis": 340, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":"The Hague" },
                 
                    
                    { "x_axis": 513, "y_axis": 325, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}]; //purple
