@@ -52,7 +52,7 @@ nav {
 
 .navigation {
   margin: 0 auto;
-  width: 800px;
+  width: 580px;
   height: 100%; }
 
 .onepage-wrapper {
@@ -368,14 +368,8 @@ nav {
 .margin_right {
   margin-right: 34px; }
 
-#milan div {
-  background-image: url("../img/milan.png"); }
-
-#oxford div {
-  background-image: url("../img/oxford.png"); }
-
-#manchester div {
-  background-image: url("../img/manchester.png"); }
+#bonn div {
+  background-image: url("../img/bonn.png"); }
 
 #denhaag div {
   background-image: url("../img/denhaag.png"); }
