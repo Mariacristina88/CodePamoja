@@ -8,21 +8,22 @@ function createMap() {
         height = 800; 
 
     var projection = d3.geo.mercator()
-        .center([-20, 59])
-        .scale(400)
+        .center([-5, 48])
+        .scale(300)
         .rotate([-10,0]);
 
-    var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);
+  //  var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);  // ** If in comment, makes the website scrollable also on the map
 
-    var svg = d3.select(".container").append("svg")
+    var svg = d3.select(".container").append("svg") 
         .attr("class", "map")
         .attr("cursor", "move")
         .attr("width", width)
         .attr("height", height);
 
     var g = svg.append("g")
-              .call(zoom)
-              .append("g");
+           //  .call(zoom)     
+             .append("g")
+            ;
 
     g.append("rect")
         .attr("class", "overlay")
@@ -44,12 +45,12 @@ function createMap() {
           .attr("d", path)
 
       var textName = [
-                     { "x_axis": 550, "y_axis": 160, "name": "EUROPE" },
-                     { "x_axis": 1000, "y_axis": 250, "name": "ASIA" },
-                     { "x_axis": 1300, "y_axis": 740, "name": "OCEANIA" },
-                     { "x_axis": 500, "y_axis": 450, "name": "AFRICA" },
+                     { "x_axis": 520, "y_axis": -20, "name": "EUROPE" },
+                     { "x_axis": 780, "y_axis": 120, "name": "ASIA" },
+                     
+                     { "x_axis": 400, "y_axis": 300, "name": "AFRICA" },
                      { "x_axis": -375, "y_axis": 150, "name": "NORTH AMERICA" },
-                     { "x_axis": -90, "y_axis": 650, "name": "SOUTH AMERICA" }];
+                     { "x_axis": -80, "y_axis": 380, "name": "SOUTH AMERICA" }];
       
       //Names of the countries
       var label = g.selectAll("text")
@@ -64,13 +65,10 @@ function createMap() {
                   .text(function (d) {return d.name;});
 
       var mainCircles = [
-                   { "x_axis": 447, "y_axis": 125, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
-                   //{ "x_axis": 449, "y_axis": 120, "radius": 4, "color" : "brown", "country":"The Netherlands", "image":"../img/rotterdam-thumbnail.jpg", "city":"Rotterdam" }, //brown
-                   { "x_axis": 475, "y_axis": 200, "radius": 4, "color" : "red", "country":"Italy","image":"../img/milan-thumbnail.jpg", "city":"Milan"},     //red
-                   { "x_axis": 485, "y_axis": 130, "radius": 4, "color" : "#006838", "country":"Germany","image":"../img/bonn-thumbnail.jpg","city":"Bonn"}, //green
-                   { "x_axis": 390, "y_axis": 120, "radius": 4, "color" : "#27AAE1", "country":"England","image":"../img/manchester-thumbnail.jpg","city":"Manchester"}, //blue
-                   { "x_axis": 673, "y_axis": 550, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}, //purple
-                   { "x_axis": 1140, "y_axis": 472, "radius": 4, "color" : "#fde601", "country":"Cambodia","image":"../img/phnom-penh-thumbnail.jpg", "city":"Phnom Penh"}]; //yellow
+                   { "x_axis": 340, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
+                
+                   
+                   { "x_axis": 513, "y_axis": 325, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}]; //purple
 
         var circles = g.selectAll("circle")
                       .data(mainCircles)
@@ -161,11 +159,8 @@ function createMap() {
                                   .style("stroke-width", "2px")
                                   .style("fill", "rgba(0,0,0,0)");
 
-        line1 = [{"x":445, "y":132},{"x":470, "y":350},{"x":670, "y":544}]; //To Kenya
-        line2 = [{"x":443, "y":118},{"x":420, "y":110},{"x":398, "y":117}]; //To Manchester
-        line3 = [{"x":452, "y":130},{"x":470, "y":165},{"x":473, "y":193}]; //To Milan
-        line4 = [{"x":455, "y":123},{"x":478, "y":127},{"x":478, "y":127}]; // To Germany
-        line5 = [{"x":455, "y":127},{"x":700, "y":300},{"x":1133, "y":468}]; // To Cambodia
+        line1 = [{"x":344, "y":8},{"x":500, "y":150},{"x":511, "y":318}]; //To Kenya
+        
 
 
         var lineFunction = d3.svg.line()
@@ -185,50 +180,34 @@ function createMap() {
                             .style("fill","none") };
 
       var lineOne = lineAttributes(line1);
-      var lineTwo = lineAttributes(line2);
-      var lineThree = lineAttributes(line3);
-      var lineFour = lineAttributes(line4);
-      var lineFive = lineAttributes(line5);
+      
 
 
       decorations = [
-                      {"img":"../img/wave.png", "width":80, "height":50, "x":110, "y":100, "dataP":0.1},
-                      {"img":"../img/wave.png", "width":60, "height":60, "x":80, "y":130, "dataP":0.2},
-                      {"img":"../img/wave.png", "width":80, "height":50, "x":140, "y":450, "dataP":0.1},  //atlantic ocean
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":110, "y":480, "dataP":0.2},
+                      {"img":"../img/wave.png", "width":80, "height":50, "x":110, "y":-50, "dataP":0.1},
+                      {"img":"../img/wave.png", "width":60, "height":60, "x":80, "y":-30, "dataP":0.2},
+                      {"img":"../img/wave.png", "width":80, "height":50, "x":100, "y":250, "dataP":0.1},  //atlantic ocean
+                     {"img":"../img/wave.png", "width":60, "height":60, "x":80, "y":280, "dataP":0.2},
 
-                     {"img":"../img/wave.png", "width":80, "height":50, "x":930, "y":600, "dataP":0.1}, //indian ocean
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":900, "y":630, "dataP":0.2},
+                     {"img":"../img/wave.png", "width":80, "height":50, "x":730, "y":400, "dataP":0.1}, //indian ocean
+                     {"img":"../img/wave.png", "width":60, "height":60, "x":700, "y":430, "dataP":0.2},
 
-                     {"img":"../img/wave.png", "width":80, "height":50, "x":1500, "y":300, "dataP":0.1}, //pacific ocean - right
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":1500, "y":330, "dataP":0.2},
+                     
 
-                     {"img":"../img/wave.png", "width":80, "height":50, "x":-630, "y":500, "dataP":0.1}, //pacific ocean - left
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":-630, "y":530, "dataP":0.2},
+                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":10, "y":100, "dataP":0.2},
+                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":20, "y":120, "dataP":0.1}, //atlantic ocean
+                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":40, "y":140, "dataP":0.2},
 
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":-20, "y":280, "dataP":0.2},
-                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":-40, "y":310, "dataP":0.1}, //atlantic ocean
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":-20, "y":340, "dataP":0.2},
-
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":-700, "y":100, "dataP":0.2},
-                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":-730, "y":130, "dataP":0.1}, //pacific ocean - left
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":-700, "y":160, "dataP":0.2},
-
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":340, "y":-150, "dataP":0.2},
-                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":370, "y":-190, "dataP":0.1}, //artic 
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":340, "y":-230, "dataP":0.2},
-
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":430, "y":850, "dataP":0.2},
-                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":400, "y":890, "dataP":0.1}, //artic 
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":430, "y":930, "dataP":0.2},
+                     {"img":"../img/wave.png", "width":80, "height":50, "x":1100, "y":100, "dataP":0.1}, //pacific ocean - right
+                     {"img":"../img/wave.png", "width":60, "height":60, "x":1120, "y":130, "dataP":0.2}
                     ];
 
       clouds = [
-               {"img":"../img/cloud.png", "width":120, "height":120, "x":220, "y":300, "dataP":0.5},
-               {"img":"../img/cloud.png", "width":170, "height":170, "x":1000, "y":20, "dataP":0.4},
-               {"img":"../img/cloud.png", "width":100, "height":100, "x":190, "y":180, "dataP":0.3},
-               {"img":"../img/cloud.png", "width":170, "height":170, "x":-580, "y":180, "dataP":0.3},
-               {"img":"../img/cloud.png", "width":120, "height":120, "x":700, "y":400, "dataP":0.2},
+               {"img":"../img/cloud.png", "width":120, "height":120, "x":120, "y":280, "dataP":0.5},
+               {"img":"../img/cloud.png", "width":140, "height":140, "x":600, "y":-50, "dataP":0.4},
+               {"img":"../img/cloud.png", "width":100, "height":100, "x":90, "y":20, "dataP":0.3},
+               {"img":"../img/cloud.png", "width":170, "height":170, "x":-780, "y":120, "dataP":0.3},
+               {"img":"../img/cloud.png", "width":120, "height":120, "x":600, "y":200, "dataP":0.2},
                ];
 
       var sceneParallax = g.append("g")
@@ -285,10 +264,10 @@ function createMap() {
     });
 
 
-    var arrows = [{"arrow":"../img/arrow_1.png", "width": 200, "height": 200, "x": -500, "y": 700},
-                  {"arrow":"../img/arrow_2.png", "width": 200, "height": 200, "x": 200, "y": 700},
+    var arrows = [
+                  {"arrow":"../img/arrow_2.png", "width": 200, "height": 200, "x": 130, "y": 400},
                   {"arrow":"../img/arrow_3.png", "width": 200, "height": 300, "x": 900, "y": 700},
-                  {"arrow":"../img/arrow_4.png", "width": 200, "height": 200, "x": 1600, "y": 80}
+                  {"arrow":"../img/arrow_4.png", "width": 150, "height": 150, "x": 1100, "y": -20}
                   ];
 
     var oceanArrows = g.append("g")
@@ -323,10 +302,10 @@ function createMap() {
                               .attr("y", function (d) { return d.y});
 
      
-    var oceanText = [{"text": "../img/pacificocean.png", "width": 200, "height": 100, "x": -550, "y": 500},
-                     {"text": "../img/atlanticocean.png", "width": 200, "height": 150, "x": 80, "y": 250},
-                     {"text": "../img/indianocean.png", "width": 120, "height": 30, "x": 800, "y": 550},
-                     {"text": "../img/pacificocean-right.png", "width": 120, "height": 120, "x": 1500, "y": 350}
+    var oceanText = [
+                     {"text": "../img/atlanticocean.png", "width": 200, "height": 150, "x": 20, "y": 80},
+                     {"text": "../img/indianocean.png", "width": 120, "height": 30, "x": 640, "y": 340},
+                     {"text": "../img/pacificocean-right.png", "width": 120, "height": 120, "x": 1100, "y": 150}
                       ];
 
     var textAttributes = g.append("g").selectAll("image")
@@ -343,67 +322,9 @@ function createMap() {
     /*g.attr("transform", "translate(70,70)");*/
 
 
-    function zoomed() {
 
-          var t = zoom.translate();
-            var s = zoom.scale();
+    
 
-            //those 2 values ajust the limits of the drag, so the map dont exit completly the visible zone.
-            var h = height / 1.3;
-            var w = width / 1.4;
-
-            //to calculate the zoom and the limits the map can be dragged around.
-            t[0] = Math.min(width / 2 * (s - 1) + w * s, Math.max(width / 2 * (1 - s) - w * s, t[0]));
-            t[1] = Math.min(height / 2 * (s - 1) + h * s, Math.max(height / 2 * (1 - s) - h * s, t[1]));
-
-            //apply new zoom
-            g.attr("transform", "translate(" + t + ")scale(" + s + ")");
-    }
-
-    function interpolateZoom (translate, scale) {
-        var self = this;
-        return d3.transition().duration(350).tween("zoom", function () {
-            var iTranslate = d3.interpolate(zoom.translate(), translate),
-                iScale = d3.interpolate(zoom.scale(), scale);
-            return function (t) {
-                zoom
-                    .scale(iScale(t))
-                    .translate(iTranslate(t));
-                zoomed();
-            };
-        });
-    }
-
-    function zoomClick() {
-        var clicked = d3.event.target,
-            direction = 1,
-            factor = 0.2,
-            target_zoom = 1,
-            center = [width / 2, height / 2],
-            extent = zoom.scaleExtent(),
-            translate = zoom.translate(),
-            translate0 = [],
-            l = [],
-            view = {x: translate[0], y: translate[1], k: zoom.scale()};
-
-        d3.event.preventDefault();
-        direction = (this.id === 'zoom_in') ? 1 : -1;
-        target_zoom = zoom.scale() * (1 + factor * direction);
-
-        if (target_zoom < extent[0] || target_zoom > extent[1]) { return false; }
-
-        translate0 = [(center[0] - view.x) / view.k, (center[1] - view.y) / view.k];
-        view.k = target_zoom;
-        l = [translate0[0] * view.k + view.x, translate0[1] * view.k + view.y];
-
-        view.x += center[0] - l[0];
-        view.y += center[1] - l[1];
-
-        interpolateZoom([view.x, view.y], view.k);
-    }
-
-
-    d3.selectAll('button').on('click', zoomClick);
 }
 
 if(isMobile === false)
