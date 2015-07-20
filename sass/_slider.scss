@@ -54,21 +54,24 @@
 }
 
 .slide p {
-word-wrap: break-word; 
+    position: absolute;
+    white-space: normal;
     max-width: 40%;
     text-align: center;
-    margin: 450px auto 0 auto;
+    margin: 21% auto 0 auto;
     padding: 0 0 20px 0;
     font-size: 1em;
       line-height: 1.5em;
       color: white;
+      left: 0;
+      right: 0;
 }
 
 #euroflagImg {
-min-height: 100vh;
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
-  background-image: url("../img/euroflag2.jpg");
+  background-image: url("../img/bonn.jpg");
 }
 
 #bonnImg {
