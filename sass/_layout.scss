@@ -52,7 +52,7 @@ nav {
 		text-decoration: none;
 		border-bottom-style: solid;
 		border-bottom-width: 0px;
-		border-color: #fcdb3d;
+		border-color: $yellow;
 	}
 
 	a:hover {
@@ -62,7 +62,7 @@ nav {
 	}
 
 	a.active {
-		border-bottom: 2px solid #fcdb3d;
+		border-bottom: 2px solid $yellow;
 	}
 }
 
@@ -710,7 +710,7 @@ footer {
 	left: 0px;
 	position: fixed;
 	display: block;
-	background: url("../img/logo.png") no-repeat;
+	background: url("../img/logo-web.png") no-repeat;
 	@media only screen and (max-device-width: 788px) and (orientation: portrait) {
 		background-size: 40%;
 	}
@@ -720,7 +720,7 @@ footer {
 	#loading-bar {
 		width: 100%;
 		height: 100%;
-		top: 50px;
+		top: 100px;
 		@media only screen and (max-device-width: 788px) and (orientation: portrait) {
 			top: 8%;
 		}
@@ -988,6 +988,15 @@ footer {
 
 	#three p {
     	max-width: 72%;
+    	text-align: center;
+	  margin: 450px auto 0 auto;
+	  padding: 0 0 20px 0;
+	  font-size: 46px;
+  	  line-height: 64px;
+	}
+
+	.slide p {
+	    max-width: 72%;
     	text-align: center;
 	  margin: 450px auto 0 auto;
 	  padding: 0 0 20px 0;
