@@ -374,6 +374,32 @@ nav {
 #denhaag div {
   background-image: url("../img/denhaag.png"); }
 
+.fts {
+  clear: both;
+  width: 80px;
+  height: auto;
+  bottom: 30px;
+  right: 75px;
+  position: absolute; }
+
+.fts a {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-size: 15px;
+  font-family: "Play";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: white; }
+
+.fts a:hover {
+  color: #F39200; }
+
+.fts img {
+  margin-bottom: -11px; }
+
 /*---------CONTACTS SECTION-----------*/
 .content {
   margin: 130px auto 0 auto;

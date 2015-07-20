@@ -8,7 +8,7 @@ function createMap() {
         height = 800; 
 
     var projection = d3.geo.mercator()
-        .center([-5, 48])
+        .center([-28, 48])
         .scale(300)
         .rotate([-10,0]);
 
@@ -45,12 +45,12 @@ function createMap() {
           .attr("d", path)
 
       var textName = [
-                     { "x_axis": 520, "y_axis": -20, "name": "EUROPE" },
-                     { "x_axis": 780, "y_axis": 120, "name": "ASIA" },
+                     { "x_axis": 640, "y_axis": -20, "name": "EUROPE" },
+                     { "x_axis": 900, "y_axis": 120, "name": "ASIA" },
                      
-                     { "x_axis": 400, "y_axis": 300, "name": "AFRICA" },
-                     { "x_axis": -375, "y_axis": 150, "name": "NORTH AMERICA" },
-                     { "x_axis": -80, "y_axis": 380, "name": "SOUTH AMERICA" }];
+                     { "x_axis": 520, "y_axis": 300, "name": "AFRICA" },
+                     { "x_axis": -155, "y_axis": 50, "name": "NORTH AMERICA" },
+                     { "x_axis": 40, "y_axis": 380, "name": "SOUTH AMERICA" }];
       
       //Names of the countries
       var label = g.selectAll("text")
@@ -65,10 +65,10 @@ function createMap() {
                   .text(function (d) {return d.name;});
 
       var mainCircles = [
-                   { "x_axis": 340, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
+                   { "x_axis": 460, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
                 
                    
-                   { "x_axis": 513, "y_axis": 325, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}]; //purple
+                   { "x_axis": 633, "y_axis": 325, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}]; //purple
 
         var circles = g.selectAll("circle")
                       .data(mainCircles)
@@ -159,7 +159,7 @@ function createMap() {
                                   .style("stroke-width", "2px")
                                   .style("fill", "rgba(0,0,0,0)");
 
-        line1 = [{"x":344, "y":8},{"x":500, "y":150},{"x":511, "y":318}]; //To Kenya
+        line1 = [{"x":464, "y":8},{"x":620, "y":150},{"x":631, "y":318}]; //To Kenya
         
 
 
@@ -184,30 +184,30 @@ function createMap() {
 
 
       decorations = [
-                      {"img":"../img/wave.png", "width":80, "height":50, "x":110, "y":-50, "dataP":0.1},
-                      {"img":"../img/wave.png", "width":60, "height":60, "x":80, "y":-30, "dataP":0.2},
-                      {"img":"../img/wave.png", "width":80, "height":50, "x":100, "y":250, "dataP":0.1},  //atlantic ocean
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":80, "y":280, "dataP":0.2},
+                      {"img":"../img/wave.png", "width":80, "height":50, "x":230, "y":-50, "dataP":0.1},
+                      {"img":"../img/wave.png", "width":60, "height":60, "x":200, "y":-30, "dataP":0.2},
+                      {"img":"../img/wave.png", "width":80, "height":50, "x":220, "y":250, "dataP":0.1},  //atlantic ocean
+                     {"img":"../img/wave.png", "width":60, "height":60, "x":200, "y":280, "dataP":0.2},
 
-                     {"img":"../img/wave.png", "width":80, "height":50, "x":730, "y":400, "dataP":0.1}, //indian ocean
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":700, "y":430, "dataP":0.2},
+                     {"img":"../img/wave.png", "width":80, "height":50, "x":850, "y":400, "dataP":0.1}, //indian ocean
+                     {"img":"../img/wave.png", "width":60, "height":60, "x":820, "y":430, "dataP":0.2},
 
                      
 
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":10, "y":100, "dataP":0.2},
-                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":20, "y":120, "dataP":0.1}, //atlantic ocean
-                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":40, "y":140, "dataP":0.2},
+                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":130, "y":100, "dataP":0.2},
+                     {"img":"../img/quietwave.png", "width":70, "height":50, "x":140, "y":120, "dataP":0.1}, //atlantic ocean
+                     {"img":"../img/quietwave.png", "width":50, "height":60, "x":160, "y":140, "dataP":0.2},
 
-                     {"img":"../img/wave.png", "width":80, "height":50, "x":1100, "y":100, "dataP":0.1}, //pacific ocean - right
-                     {"img":"../img/wave.png", "width":60, "height":60, "x":1120, "y":130, "dataP":0.2}
+                     {"img":"../img/wave.png", "width":80, "height":50, "x":1220, "y":100, "dataP":0.1}, //pacific ocean - right
+                     {"img":"../img/wave.png", "width":60, "height":60, "x":1240, "y":130, "dataP":0.2}
                     ];
 
       clouds = [
-               {"img":"../img/cloud.png", "width":120, "height":120, "x":120, "y":280, "dataP":0.5},
-               {"img":"../img/cloud.png", "width":140, "height":140, "x":600, "y":-50, "dataP":0.4},
-               {"img":"../img/cloud.png", "width":100, "height":100, "x":90, "y":20, "dataP":0.3},
-               {"img":"../img/cloud.png", "width":170, "height":170, "x":-780, "y":120, "dataP":0.3},
-               {"img":"../img/cloud.png", "width":120, "height":120, "x":600, "y":200, "dataP":0.2},
+               {"img":"../img/cloud.png", "width":120, "height":120, "x":240, "y":280, "dataP":0.5},
+               {"img":"../img/cloud.png", "width":140, "height":140, "x":720, "y":-50, "dataP":0.4},
+               {"img":"../img/cloud.png", "width":100, "height":100, "x":210, "y":20, "dataP":0.3},
+               {"img":"../img/cloud.png", "width":170, "height":170, "x":-660, "y":120, "dataP":0.3},
+               {"img":"../img/cloud.png", "width":120, "height":120, "x":720, "y":200, "dataP":0.2},
                ];
 
       var sceneParallax = g.append("g")
@@ -265,9 +265,9 @@ function createMap() {
 
 
     var arrows = [
-                  {"arrow":"../img/arrow_2.png", "width": 200, "height": 200, "x": 130, "y": 400},
-                  {"arrow":"../img/arrow_3.png", "width": 200, "height": 300, "x": 900, "y": 700},
-                  {"arrow":"../img/arrow_4.png", "width": 150, "height": 150, "x": 1100, "y": -20}
+                  {"arrow":"../img/arrow_2.png", "width": 200, "height": 200, "x": 250, "y": 400},
+                  {"arrow":"../img/arrow_3.png", "width": 200, "height": 300, "x": 1020, "y": 700},
+                  {"arrow":"../img/arrow_4.png", "width": 150, "height": 150, "x": 1220, "y": -20}
                   ];
 
     var oceanArrows = g.append("g")
@@ -282,12 +282,12 @@ function createMap() {
                       .attr("x", function (d) { return d.x})
                       .attr("y", function (d) { return d.y});
 
-    var gradients = [{"gradient": "../img/sea-gradient.png", "width": 1000, "height": 1000, "x": -200, "y": -50},
-                     {"gradient": "../img/sea-gradient.png", "width": 800, "height": 800, "x": 700, "y": 500},
-                     {"gradient": "../img/gradient-america.png", "width": 800, "height": 800, "x": -650, "y": -200},
-                     {"gradient": "../img/gradient-southamerica.png", "width": 600, "height": 900, "x": -300, "y": 300},
-                     {"gradient": "../img/europe.png", "width": 3000, "height": 2500, "x": -500, "y": -1200},
-                     {"gradient": "../img/oceania.png", "width": 500, "height": 500, "x": 1100, "y": 500}];
+    var gradients = [{"gradient": "../img/sea-gradient.png", "width": 1000, "height": 1000, "x": -80, "y": -50},
+                     {"gradient": "../img/sea-gradient.png", "width": 800, "height": 800, "x": 820, "y": 500},
+                     {"gradient": "../img/gradient-america.png", "width": 800, "height": 800, "x": -520, "y": -200},
+                     {"gradient": "../img/gradient-southamerica.png", "width": 600, "height": 1020, "x": -300, "y": 300},
+                     {"gradient": "../img/europe.png", "width": 3000, "height": 2500, "x": -380, "y": -1200},
+                     {"gradient": "../img/oceania.png", "width": 500, "height": 500, "x": 1220, "y": 500}];
 
     var gradientsAttributes = g.append("g")
                               .selectAll("image")
@@ -303,9 +303,9 @@ function createMap() {
 
      
     var oceanText = [
-                     {"text": "../img/atlanticocean.png", "width": 200, "height": 150, "x": 20, "y": 80},
-                     {"text": "../img/indianocean.png", "width": 120, "height": 30, "x": 640, "y": 340},
-                     {"text": "../img/pacificocean-right.png", "width": 120, "height": 120, "x": 1100, "y": 150}
+                     {"text": "../img/atlanticocean.png", "width": 200, "height": 150, "x": 140, "y": 80},
+                     {"text": "../img/indianocean.png", "width": 120, "height": 30, "x": 760, "y": 340},
+                     {"text": "../img/pacificocean-right.png", "width": 120, "height": 120, "x": 1120, "y": 150}
                       ];
 
     var textAttributes = g.append("g").selectAll("image")
