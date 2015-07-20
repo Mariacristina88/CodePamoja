@@ -58,7 +58,7 @@ nav {
 	a:hover {
 		border-bottom-style: solid;
 		border-bottom-width: 2px !important;
-		border-color: #fcdb3d;
+		border-color: $yellow;
 	}
 
 	a.active {
@@ -388,16 +388,9 @@ nav {
 	margin-right: 34px;
 }
 
-#milan div {
-	background-image: url("../img/milan.png");
-}
 
-#oxford div {
-	background-image: url("../img/oxford.png");
-}
-
-#manchester div {
-	background-image: url("../img/manchester.png");
+#bonn div {
+	background-image: url("../img/bonn.png");
 }
 
 #denhaag div {
@@ -496,8 +489,8 @@ nav {
 	background-color: transparent;
 	width: 150px;
 	height: 40px;
-	border: solid 1px #fcdb3d;
-	color: #fcdb3d;
+	border: solid 1px $yellow;
+	color: $yellow;
 	font-family: "Play";
 	font-size: 18px;
 	text-transform: uppercase;
@@ -518,7 +511,7 @@ nav {
 
 #submit:hover {
 	
-	background-color: #fcdb3d;
+	background-color: $yellow;
 	color: white;
 }		
 
@@ -581,7 +574,7 @@ nav {
 	}
 
 	a:hover {
-		color: #fcdb3d;
+		color: $yellow;
 	}
 
 	p {
@@ -1239,7 +1232,7 @@ footer {
 		}
 
 		a:hover {
-			color: #fcdb3d;
+			color: $yellow;
 		}
 
 		p {
