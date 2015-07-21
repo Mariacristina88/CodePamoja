@@ -67,16 +67,31 @@
       left: 0;
       right: 0;
 
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      max-width: 75%; 
+      margin: 40% auto 0 auto;
+      font-size: 1.8em;
+
+    }
+
 }
 
 #bonnText {
   left: 222.5%;
   width: 55%;
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    left: 213.5%;
+    width: 75%;
+    }
 }
 
 #denhaagText {
  left: 122.5%;
   width: 55%;
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    left: 112.5%;
+    width: 75%;
+    }
 }
 
 #euroflagImg {

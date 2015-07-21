@@ -361,13 +361,13 @@ nav {
   color: #F39200; }
 
 .skylines {
-  margin: 200px auto 0 auto;
+  margin: 300px auto 0 auto;
   width: 374px;
   cursor: pointer; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (min-width: 1100px) {
     .skylines {
-      margin: 300px auto 0 auto; } }
-  @media only screen and (max-width: 800px) {
+      margin: 200px auto 0 auto; } }
+  @media only screen and (max-width: 788px) {
     .skylines {
       margin: 400px auto 0 auto; } }
 
@@ -542,7 +542,7 @@ nav {
     font-weight: normal;
     font-size: 21px;
     color: #485956;
-    margin: 0 0 30px 0;
+    margin: 0 0 12px 0;
     line-height: 18px; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info h3 {
@@ -558,20 +558,16 @@ nav {
     text-transform: uppercase; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info span {
-        font-size: 0.8em; } }
+        font-size: 0.6em; } }
   #contacts-info a {
     color: #485956;
     font-size: 14px;
     text-align: left;
     font-family: "Play";
-    font-weight: bold;
-    background-image: url("../img/angle-brackets.png");
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    padding: 0 0 0 15px; }
+    font-weight: bold; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info a {
-        font-size: 2.5em;
+        font-size: 1em;
         background-size: 20px;
         padding: 0 0 0 45px; } }
   #contacts-info a:hover {
@@ -589,7 +585,7 @@ nav {
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info p {
         line-height: 1.2em;
-        font-size: 2.5em;
+        font-size: 1.2em;
         background-size: 20px;
         padding: 0 0 0 45px; } }
   #contacts-info address {
@@ -605,9 +601,17 @@ nav {
     line-height: 21px; }
     @media only screen and (max-device-width: 788px) and (orientation: portrait) {
       #contacts-info address {
-        font-size: 2.5em;
+        font-size: 1em;
         background-size: 20px;
         line-height: 1.2em;
+        padding: 0 0 0 45px; } }
+  #contacts-info .add-arrow {
+    background-image: url("../img/angle-brackets.png");
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    padding: 0 0 0 15px; }
+    @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+      #contacts-info .add-arrow {
         padding: 0 0 0 45px; } }
 
 form p {
@@ -691,6 +695,9 @@ footer {
 
 #close {
   display: none; }
+
+#three {
+  margin-top: 22%; }
 
 /*---------HAMBURGER MENU-----------*/
 #hamburger-icon {
@@ -868,7 +875,8 @@ footer {
 
   .skylines {
     width: 90%;
-    height: 350%; }
+    height: 350%;
+    margin: 500px auto 0 auto; }
 
   .group {
     width: 48%;
@@ -938,15 +946,18 @@ footer {
     display: none; }
 
   .fts img {
-    width: 200px;
+    width: 150px;
     margin-bottom: 23px; }
 
   .fts {
-    width: 200px;
-    bottom: 90px; }
+    width: 150px;
+    bottom: 45px; }
 
   .fts a {
-    font-size: 52px; } }
+    font-size: 52px; }
+
+  #three {
+    margin-top: 53%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   #loading-image {
     background-size: 30%; }
@@ -1219,14 +1230,27 @@ footer {
   color: white;
   left: 0;
   right: 0; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    .slide p {
+      max-width: 75%;
+      margin: 40% auto 0 auto;
+      font-size: 1.8em; } }
 
 #bonnText {
   left: 222.5%;
   width: 55%; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #bonnText {
+      left: 213.5%;
+      width: 75%; } }
 
 #denhaagText {
   left: 122.5%;
   width: 55%; }
+  @media only screen and (max-device-width: 788px) and (orientation: portrait) {
+    #denhaagText {
+      left: 112.5%;
+      width: 75%; } }
 
 #euroflagImg {
   min-height: 100vh;

@@ -16,7 +16,6 @@ function createMap() {
 
     var svg = d3.select(".container").append("svg") 
         .attr("class", "map")
-        .attr("cursor", "move")
         .attr("width", width)
         .attr("height", height);
 
@@ -65,7 +64,7 @@ function createMap() {
                   .text(function (d) {return d.name;});
 
       var mainCircles = [
-                   { "x_axis": 460, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-rotterdam-thumbnail.png", "city":["The Hague", " Rotterdam"] },
+                   { "x_axis": 460, "y_axis": 2, "radius": 4, "color" : "orange", "country":"The Netherlands", "image":"../img/den-haag-thumbnail.jpg", "city":["The Hague", " Rotterdam"] },
                 
                    
                    { "x_axis": 633, "y_axis": 325, "radius": 4, "color" : "#805CAC", "country":"Kenya","image":"../img/nairobi-thumbnail.jpg", "city":"Nairobi"}]; //purple
