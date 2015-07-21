@@ -379,9 +379,17 @@ nav {
 }
 
 .skylines {
-	margin: 120px auto 0 auto;
+	margin: 200px auto 0 auto;
 	width: 374px;
 	cursor:pointer;
+
+	@media only screen and (max-width: 1000px) {
+		  margin:300px auto 0 auto;
+		}
+	@media only screen and (max-width: 800px) {
+		  margin:400px auto 0 auto;
+		}
+	
 }
 
 .margin_right {
@@ -750,7 +758,7 @@ footer {
 
 .hamburger-menu {
 	display: none;
-	background-color: rgba(22,119,133, 0.9);
+	background-color: rgba(0,102,51, 0.9);
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -802,7 +810,7 @@ footer {
 	  float: right;
 	  border: none;
 	  border-radius: 5px;
-	  background-color: #2D8593;
+	  background-color: #006633;
 		 -webkit-transition: -webkit-transform 0.3s;
 	          transition: transform 0.3s;
 }
@@ -827,7 +835,7 @@ footer {
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__rot.active {
-  background-color: lighten(#2D8593, 0.6);
+  background-color: lighten(#006633, 0.6);
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1041,17 +1049,22 @@ footer {
 		display: none;
 	}
 
-}
+	.fts img {
+		width: 200px;
+		margin-bottom: 23px;
+	}
 
-@media only screen and (max-device-width: 1300px) {
-	.buttonzoom {
-		 display: none;
+	.fts {
+		width: 200px;
+		bottom:90px;
+	}
+
+	.fts a {
+		font-size: 52px;
 	}
 }
 
-// .ui-widget {
-//     font-size:30px !important;
-// }
+
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 	#loading-image {

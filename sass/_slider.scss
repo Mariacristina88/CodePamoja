@@ -57,6 +57,7 @@
     position: absolute;
     white-space: normal;
     max-width: 55%;
+    min-width: 350px;
     text-align: center;
     margin: 21% auto 0 auto;
     padding: 0 0 20px 0;
@@ -65,15 +66,16 @@
       color: white;
       left: 0;
       right: 0;
+
 }
 
 #bonnText {
-  left: 122.5%;
+  left: 222.5%;
   width: 55%;
 }
 
 #denhaagText {
-  left: 222.5%;
+ left: 122.5%;
   width: 55%;
 }
 
@@ -81,7 +83,7 @@
   min-height: 100vh;
   background-position: center;
   background-size: cover;
-  background-image: url("../img/bonn.jpg");
+  background-image: url("../img/euroflag2.jpg");
 }
 
 #bonnImg {
