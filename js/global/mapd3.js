@@ -205,8 +205,8 @@ function createMap() {
                {"img":"../img/cloud.png", "width":120, "height":120, "x":240, "y":280, "dataP":0.5},
                {"img":"../img/cloud.png", "width":140, "height":140, "x":720, "y":-50, "dataP":0.4},
                {"img":"../img/cloud.png", "width":100, "height":100, "x":210, "y":20, "dataP":0.3},
-               {"img":"../img/cloud.png", "width":170, "height":170, "x":-660, "y":120, "dataP":0.3},
-               {"img":"../img/cloud.png", "width":120, "height":120, "x":720, "y":200, "dataP":0.2},
+               {"img":"../img/cloud.png", "width":100, "height":100, "x":600, "y":20, "dataP":0.3},
+               {"img":"../img/cloud.png", "width":120, "height":120, "x":720, "y":100, "dataP":0.2},
                ];
 
       var sceneParallax = g.append("g")

@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers .= "Content-type: text/html\r\n";
         $title = 'Application on restructuringanoymous.com';
 
-        if (mail($to = 'info@restructuringanonymous.com', $title, $message, $headers)) {
+        if (mail($to = 'mariacristinadt@hotmail.com', $title, $message, $headers)) {
             $mailSuccess = true;
         } else {
             $mailFailed = true;

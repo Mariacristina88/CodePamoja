@@ -76,6 +76,18 @@
 
 }
 
+.slide p span a {  
+    text-decoration: none;
+    color:white;
+    font-weight: 700;
+  }
+
+  .slide p span a:hover {  
+    
+    color:$yellow;
+    
+  }
+
 #bonnText {
   left: 222.5%;
   width: 55%;

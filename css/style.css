@@ -296,6 +296,14 @@ nav {
   margin: 15px auto 0 auto;
   max-width: 311px; }
 
+.icons a:hover {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0.6; }
+
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -803,7 +811,7 @@ footer {
   .about_text {
     width: 85%;
     height: auto;
-    margin: 65% auto 0 auto; }
+    margin: 53% auto 0 auto; }
 
   .about_text p {
     max-width: 80%;
@@ -823,10 +831,6 @@ footer {
 
   .icons img {
     width: 200px; }
-
-  .icons svg {
-    height: 28% !important;
-    width: 28% !important; }
 
   .line {
     margin: 0 auto 50px auto; }
@@ -1235,6 +1239,14 @@ footer {
       max-width: 75%;
       margin: 40% auto 0 auto;
       font-size: 1.8em; } }
+
+.slide p span a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700; }
+
+.slide p span a:hover {
+  color: #F39200; }
 
 #bonnText {
   left: 222.5%;

@@ -49,13 +49,13 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 		    {    
 		        if (value === 1)
 		        {
-		        	removeActive('#denhaag', '#denhaag span');
-					makeActive('bonn');
+		        	removeActive('#bonn div', '#bonn span');
+					makeActive('denhaag');
 		        }   
 		        else if (value === 2)
 		        {
-					removeActive('#bonn div', '#bonn span');
-					makeActive('denhaag');
+					removeActive('#denhaag div', '#denhaag span');
+					makeActive('bonn');
 		        }
 		        else if (value === 3)
 		        {
@@ -112,13 +112,13 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 		console.log(1);
 		removeActive('#bonn div', '#bonn span');
 		makeActive('denhaag');
-		carousel.moveToSlide(-2); 
+		carousel.moveToSlide(-1); 
 	});
 
 	document.querySelector('#bonn').addEventListener("click", function(){ 
 		removeActive('#denhaag div', '#denhaag span');
 		makeActive('bonn');
-		carousel.moveToSlide(-1); 
+		carousel.moveToSlide(-2); 
 	});
 
 	function makeActive(city) {
