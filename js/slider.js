@@ -57,19 +57,10 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 					removeActive('#denhaag div', '#denhaag span');
 					makeActive('bonn');
 		        }
-		        else if (value === 3)
-		        {
-					//removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#milan div', '#milan span');
-					//makeActive('denhaag');
-		        }
-		        else if (value === 4)
-		        {
-					//removeActive('#manchester div', '#manchester span', '#oxford div', '#oxford span', '#denhaag div', '#denhaag span');
-					//makeActive('milan');
-		        }
 		        else
 		        {
-					removeActive('#denhaag div', '#denhaag span', '#bonn div', '#bonn span');
+					removeActive('#denhaag div', '#denhaag span');
+					removeActive('#bonn div', '#bonn span');
 		        }
 		    };
 	    
@@ -95,7 +86,7 @@ var Carousel = function (frameSelector, sliderSelector, slidesSelector, btnLeftS
 				{
 					leftPosition = (slidesNumber-1)*-100;
 					slider.style.left = leftPosition + '%';  
-					highlightCity(4);
+					highlightCity(2);
 				}
 	        },
 	        moveToSlide: function (value)
