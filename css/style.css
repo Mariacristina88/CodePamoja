@@ -361,9 +361,15 @@ nav {
   color: #F39200; }
 
 .skylines {
-  margin: 15px auto 0 auto;
+  margin: 200px auto 0 auto;
   width: 374px;
   cursor: pointer; }
+  @media only screen and (max-width: 1000px) {
+    .skylines {
+      margin: 300px auto 0 auto; } }
+  @media only screen and (max-width: 800px) {
+    .skylines {
+      margin: 400px auto 0 auto; } }
 
 .margin_right {
   margin-right: 34px; }
@@ -692,7 +698,7 @@ footer {
 
 .hamburger-menu {
   display: none;
-  background-color: rgba(22, 119, 133, 0.9);
+  background-color: rgba(0, 102, 51, 0.9);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -732,7 +738,7 @@ footer {
   float: right;
   border: none;
   border-radius: 5px;
-  background-color: #2D8593;
+  background-color: #006633;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s; }
 
@@ -753,7 +759,7 @@ footer {
 
 /* active state, i.e. menu open */
 .cmn-toggle-switch__rot.active {
-  background-color: #2e8795;
+  background-color: #006935;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
@@ -891,14 +897,6 @@ footer {
     font-size: 46px;
     line-height: 64px; }
 
-  .slide p {
-    max-width: 72%;
-    text-align: center;
-    margin: 450px auto 0 auto;
-    padding: 0 0 20px 0;
-    font-size: 46px;
-    line-height: 64px; }
-
   .line {
     -webkit-transform: scale(2);
     padding: 15px 0 10px 0; }
@@ -937,10 +935,18 @@ footer {
     border: none; }
 
   footer {
-    display: none; } }
-@media only screen and (max-device-width: 1300px) {
-  .buttonzoom {
-    display: none; } }
+    display: none; }
+
+  .fts img {
+    width: 200px;
+    margin-bottom: 23px; }
+
+  .fts {
+    width: 200px;
+    bottom: 90px; }
+
+  .fts a {
+    font-size: 52px; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   #loading-image {
     background-size: 30%; }
@@ -1199,6 +1205,28 @@ footer {
   padding: 0;
   width: 100%;
   height: 100%; }
+
+.slide p {
+  position: absolute;
+  white-space: normal;
+  max-width: 55%;
+  min-width: 350px;
+  text-align: center;
+  margin: 21% auto 0 auto;
+  padding: 0 0 20px 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: white;
+  left: 0;
+  right: 0; }
+
+#bonnText {
+  left: 222.5%;
+  width: 55%; }
+
+#denhaagText {
+  left: 122.5%;
+  width: 55%; }
 
 #euroflagImg {
   min-height: 100vh;
