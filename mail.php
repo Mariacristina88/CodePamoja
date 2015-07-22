@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $from = ($name) ? $name . ' <' . $email . '>' : $email;
         $headers = "From: {$from}\r\nReply-To: {$from}\r\n";
         $headers .= "Content-type: text/html\r\n";
-        $title = 'Application on restructuringanoymous.com';
+        $title = 'Application on CodePamoja';
 
         if (mail($to = 'info@codepamoja.org', $title, $message, $headers)) {
             $mailSuccess = true;
