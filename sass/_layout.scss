@@ -425,6 +425,7 @@ nav {
 }
 
 .fts a{
+	height: 100px;
   margin: 0 auto;
   padding: 0 auto;
   font-size: 15px;
@@ -442,7 +443,8 @@ nav {
  }
 
  .fts img{
-  margin-bottom: -11px;
+  margin: 0;
+  display: block;
  }
 
 /*---------CONTACTS SECTION-----------*/
@@ -1044,8 +1046,9 @@ footer {
 	  display: block;
 	  min-width: 93.5%;
 	  height: 115px;
-	  background-color: #fcdb3d;
+	  background-color: $yellow;
 	  margin: 0 0 27px 27px;
+	  border: none;
 	}
 
 	#close {
@@ -1054,7 +1057,7 @@ footer {
 	  display: block;
 	  width: 70px;
 	  height: 70px;
-	  background-color: #fcdb3d;
+	  background-color: $yellow;
 	  margin: 20px 20px 20px auto;
 	  padding: 5px;
 	  border: none;
@@ -1071,7 +1074,7 @@ footer {
 
 	.fts {
 		width: 150px;
-		bottom:45px;
+		bottom:120px;
 	}
 
 	.fts a {

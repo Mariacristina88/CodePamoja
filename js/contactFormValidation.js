@@ -4,6 +4,7 @@
 */
 var validateField = function(field) {
     var validators = fieldValidatorMapping[field];
+    var formIsValidated = null;
     if (!(field in fieldValidatorMapping)) {
         return;
     }
@@ -12,6 +13,7 @@ var validateField = function(field) {
         errorElement = document.getElementById('error_' + field);
         var hasNoError = showError(field, elem.value, validators[j], errorElement);
         if (!hasNoError) {
+            
             break;
         }
     }
