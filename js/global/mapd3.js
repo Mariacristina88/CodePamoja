@@ -10,14 +10,15 @@ function createMap() {
     var projection = d3.geo.mercator()
         .center([-28, 48])
         .scale(300)
-        .rotate([0,0]);
+        .rotate([-10,0]);
 
   //  var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);  // ** If in comment, makes the website scrollable also on the map
 
 
     var svg = d3.select(".container").append("svg") 
         .attr("class", "map")
-        ;
+        .attr("width", width)
+        .attr("height", height);
 
     var g = svg.append("g")
            //  .call(zoom)     
