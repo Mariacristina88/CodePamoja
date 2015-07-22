@@ -10,14 +10,14 @@ function createMap() {
     var projection = d3.geo.mercator()
         .center([-28, 48])
         .scale(300)
-        .rotate([-10,0]);
+        .rotate([0,0]);
 
   //  var zoom = d3.behavior.zoom().scaleExtent([0.6, 1.5]).on("zoom", zoomed);  // ** If in comment, makes the website scrollable also on the map
 
+
     var svg = d3.select(".container").append("svg") 
         .attr("class", "map")
-        .attr("width", width)
-        .attr("height", height);
+        ;
 
     var g = svg.append("g")
            //  .call(zoom)     
@@ -36,6 +36,7 @@ function createMap() {
         g.selectAll("path")
           .data(topojson.object(topology, topology.objects.countries)
               .geometries)
+
         .enter()
           .append("g")
           .attr("id","pathmap")
@@ -75,6 +76,7 @@ function createMap() {
                       .append("circle")
                       .attr("class", "circleAnim")
                       .attr("transform", "translate(140,210)");
+
 
 
      //   svg.call(tip);
@@ -141,12 +143,12 @@ function createMap() {
                                   .style("top", (d3.event.pageY - 220) + "px")      
                               })
                             
-                              .on("mouseout", function(d) {       
-                                myTool.transition()
-                                    .duration(500)
-                                    .style("opacity", "0")            
-                                    .style("display", "none")
-                              });
+                            .on("mouseout", function(d) {       
+                              myTool.transition()
+                                  .duration(500)
+                                  .style("opacity", "0")            
+                                  .style("display", "none")
+                            });
                              
                           
 
@@ -168,6 +170,7 @@ function createMap() {
                           .interpolate("basis");
 
         var line = g.append("g");
+
                     
         var lineAttributes = function(f) { 
                             line
@@ -317,12 +320,8 @@ function createMap() {
                           .attr("height", function (d) { return d.height})
                           .attr("x", function (d) { return d.x})
                           .attr("y", function (d) { return d.y});
-
-    /*g.attr("transform", "translate(70,70)");*/
-
-
-
     
+//g.attr("transform", "translate(0,0)scale(1.5)");
 
 }
 

@@ -5,11 +5,13 @@
   stroke: white;
   stroke-width: 1px;
   fill: #FFE4A3;
+  
 }
 
 .map {
   background-color: #2d8593;
   height:100%;
+  width: 100%;
 }
 
 .overlay {
