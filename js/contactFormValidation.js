@@ -27,7 +27,7 @@ var fieldValidatorMapping = {
         name: ['fieldIsNotEmpty',['fieldHasMinLen', 3]],
         telephone: ['fieldIsNotEmpty', 'fieldIsNumber', ['fieldHasMaxLen', 13], ['fieldHasMinLen', 8]],
         email: ['fieldIsNotEmpty', 'fieldIsValidEmail'],
-        subject: ['fieldIsNotEmpty'],
+        subject: ['fieldIsNotEmpty',['fieldHasMinLen', 3]],
         message: ['fieldIsNotEmpty', ['fieldHasMaxLen', 200], ['fieldHasMinLen', 10]]
 
     };
@@ -54,21 +54,20 @@ var showError = function(field, value, validator, errorElement) {
     } return false;
 };
 
+
+
 /**
 * Click event is added to the submit button.
 * When submit button is clicked the form is validated.
 */
-document.getElementById('submit').addEventListener('click', function() {
-    console.log("a");
-    fields = ['name', 'email', 'telephone', 'subject', 'message'];
-    fields.forEach(validateField);
-
-
-/**
-* Form elements
-* @type {array}
-*/
 var formElems = document.contactform.elements;
+
+document.getElementById('field').addEventListener('change', function() {
+
+    for (var i = 0; i < formElems.length; i++) {
+        formElems[i].addEventListener('keyup', onKeyUpValidate.bind(formElems[i]), false);
+        }
+});
 
 /**
 * it calls the validate function
@@ -78,12 +77,10 @@ var onKeyUpValidate = function(event) {
     validateField(this.name);
 };
 
-/**
-* This function runs the validation when the keys are pressed.
-*/
-for (var i = 0; i < formElems.length; i++) {
-    formElems[i].addEventListener('keyup', onKeyUpValidate.bind(formElems[i]), false);
-}
+
+document.getElementById('submit').addEventListener('submit', function(event) {
+    if (!validateField) {
+        event.preventDefault(input);
+    }
+
 });
-
-

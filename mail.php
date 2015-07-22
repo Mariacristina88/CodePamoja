@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers .= "Content-type: text/html\r\n";
         $title = 'Application on CodePamoja';
 
-        if (mail($to = 'mariacristinadt@hotmail.com', $title, $message, $headers)) {
+        if (mail($to = 'info@codepamoja.org', $title, $message, $headers)) {
             $mailSuccess = true;
             
         } else {
