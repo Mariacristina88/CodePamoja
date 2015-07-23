@@ -2,10 +2,16 @@
 * This function validates the contact form fields.
 * @param {array} fields - An array with all the form fields.
 */
+
+var errortext = document.getElementsByClassName('errortext');
+console.log(typeof errortext)
+console.log( errortext.length)
+
 var validateField = function(field) {
     var validators = fieldValidatorMapping[field];
     var formIsValidated = null;
     if (!(field in fieldValidatorMapping)) {
+
         return;
     }
     for (var j = 0; j < validators.length; j++) {
@@ -13,11 +19,13 @@ var validateField = function(field) {
         errorElement = document.getElementById('error_' + field);
         var hasNoError = showError(field, elem.value, validators[j], errorElement);
         if (!hasNoError) {
-            
             break;
         }
     }
+    
 };
+
+
 
 /**
 * Array which maps the field of the contact form with the validators.
@@ -62,25 +70,34 @@ var showError = function(field, value, validator, errorElement) {
 */
 var formElems = document.contactform.elements;
 
-document.getElementById('field').addEventListener('change', function() {
-
-    for (var i = 0; i < formElems.length; i++) {
-        formElems[i].addEventListener('keyup', onKeyUpValidate.bind(formElems[i]), false);
-        }
-});
 
 /**
 * it calls the validate function
 * @param {Element} event - The binded element.
 */
+
+
 var onKeyUpValidate = function(event) {
     validateField(this.name);
 };
 
+    for (var i = 0; i < formElems.length; i++) {
+        formElems[i].addEventListener('keyup', onKeyUpValidate.bind(formElems[i]), false);
+        }
 
-document.getElementById('submit').addEventListener('submit', function(event) {
-    if (!validateField) {
-        event.preventDefault(input);
-    }
+
+document.getElementById('submit').addEventListener('click', function(event) {
+    fields = ['name', 'email', 'telephone', 'subject', 'message'];
+
+    fields.forEach(validateField);
+    var errortextarray = Array.prototype.slice.call(errortext);
+
+    errortextarray.forEach(function(element, index){
+        if (element.innerHTML !== '') {
+            event.preventDefault();
+        } 
+
+    });
+
 
 });

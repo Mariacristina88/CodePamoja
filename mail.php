@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mail($to = 'info@codepamoja.org', $title, $message, $headers)) {
             $mailSuccess = true;
             
+            
         } else {
             $mailFailed = true;
             $mailMessage = 'Email sending failed';
@@ -64,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //info@codepamoja.org
 
     sendMail();
-    header("Location: $redirect");
+     header("Location: $redirect");
 }
 
 ?>
