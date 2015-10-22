@@ -68,7 +68,7 @@ nav {
 
 .navigation {
 	margin: 0 auto;
-	width: 580px;
+	width: 713px;
   	height: 100%;
 }
 
@@ -451,9 +451,29 @@ nav {
   color: $yellow;
  }
 
- .fts img{
+ .fts img {
   margin: 0;
   display: block;
+ }
+
+ .download {
+	margin: 0 auto;
+}
+
+.download a {	
+  margin: 0 auto;
+  padding: 0 auto;
+  font-size: 17px;
+  font-family: "Play";
+  font-weight: 800;
+  text-decoration: underline;
+  text-align: center;
+  display: block;
+  color:white;
+ }
+
+ .download a:hover {
+  color: $yellow;
  }
 
 /*---------CONTACTS SECTION-----------*/

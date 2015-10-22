@@ -31,6 +31,7 @@
 											data-300="border-bottom-width: 2px;"
 											data-1309="border-bottom-width: 2px;"
 											data-1310="border-bottom-width: 0px;">ABOUT US</a></li>
+						<li><a id="apply" href='http://apply.codepamoja.org/cp/application.jsp' target=”_blank”>APPLY</a></li>
 						<li><a href="#partners" data-menu-top="1410"
 											data-0="border-bottom-width: 0px;"
 											data-1309="border-bottom-width: 0px;"
@@ -56,10 +57,12 @@
 											data-2400="border-bottom-width: 2px;"
 											data-3299="border-bottom-width: 2px;"
 											data-3300="border-bottom-width: 0px;">SUPPORTERS</a></li>
-						<li class='remove_mright'><a href='#contacts' data-menu-top="3300"
+						<li><a href='#contacts' data-menu-top="3300"
 											data-0="border-bottom-width: 0px;"
 											data-3299="border-bottom-width: 0px;"
 											data-3300="border-bottom-width: 2px;">CONTACTS</a></li>
+					
+						<li class='remove_mright'><a id="blog" href='http://codepamoja.org/blog/' target=”_blank”>BLOG</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -80,9 +83,11 @@
 			    <div class="hamburger-menu">
 			        <ul>
 			        	<li><a href="#about" data-menu-top="350">ABOUT US</a></li>
+			        	<li><a href='http://apply.codepamoja.org/cp/application.jsp' target=”_blank” >APPLY</a></li>
 			        	<li><a href="#partners" data-menu-top="1410">PARTNERS</a></li>
 			        	<li><a href='#supporters' data-menu-top="2410">SUPPORTERS</a></li>
 			        	<li><a href='#contacts' data-menu-top="3300">CONTACTS</a></li>
+			        	<li><a href='http://codepamoja.org/blog/' target=”_blank” >BLOG</a></li>
 			        </ul>
 				</div>
 			</header>
@@ -125,6 +130,8 @@
 							</svg>
 						</div>
 						<p class="payoff" style="padding:0;">Sharing knowledge, building economies</p>
+
+						<div class="download"><a href="CodePamoja.pdf" target="_blank">Download resources</a></div>
 				</div>
 			</div>
 			
@@ -320,6 +327,21 @@ var nav = document.getElementById("hamburger-icon");
 	$(".navigation a").click(function(){
      $("a").removeClass("active");
      $(this).addClass("active");
+
+     if ($("#blog").hasClass("active")) {
+     	$("#blog").removeClass("active");
+     }
+     if ($("#apply").hasClass("active")) {
+     	$("#apply").removeClass("active");
+     }
+ });
+
+	$("#blog").click(function(){
+     $("a").removeClass("active");
+ });
+
+	$("#apply").click(function(){
+     $("a").removeClass("active");
  });
 
 	$(".hamburger-group button").click(function(){
